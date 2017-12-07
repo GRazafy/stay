@@ -5,20 +5,28 @@ public class Reponses{
     final int NBREPONSE = 3;
 
 
+    /***Tableau de Toutes les réponses de L'UTILISATEUR ***/
+    private String[][] tabReponsesUtil = new String[TAILLEDIALOGUE][NBREPONSE];
 
-    String[][] tabReponsesUtil = new String[TAILLEDIALOGUE][NBREPONSE];
-    String[] tabReponsesBot = new String[TAILLEDIALOGUE];
-
+    /***Tableau de Toutes les réponses du BOT ***/
+    private String[] tabReponsesBot = new String[TAILLEDIALOGUE];
 
 
 
     public Reponses(){
-        
+
+        /***Initialisation des Tableau de Réponses du BOT et de l'UTILISATEUR***/
+        InitReponsesUtil();
+        InitReponsesBot();
     }
 
 
     public String[][] getTabReponsesUtil() {
         return tabReponsesUtil;
+    }
+
+    public String[] getTabReponsesBot() {
+        return tabReponsesBot;
     }
 
     private void InitReponsesUtil()
