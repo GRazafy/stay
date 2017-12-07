@@ -16,7 +16,7 @@ public class Reponses{
     private int serieMauvaiseReponse = 0;
     private int ReponsePrec;
 
-
+    private int score = 0;
 
 
     public Reponses(){
@@ -29,11 +29,12 @@ public class Reponses{
     public void reponseChoisi(int i){
         switch (i){
             case 0:
-
+                score++;
                 break;
             case 1:
                 break;
             case 2:
+                score--;
                 break;
         }
     }
@@ -60,6 +61,19 @@ public class Reponses{
         return tabReponsesBot;
     }
 
+    private String conclusionHistoire()
+    {
+        if(score < 0)
+        {
+            DerniereReponse = "Bonjour, je suis Charlotte, la mère d'Alex. C'est avec tristesse que je t'annonce que mon fils adoré est décédé cette nuit suite a" +
+                    " un accident de voiture... Il etait saoul";
+        }
+        else
+        {
+            DerniereReponse = "Au final j'ai dormi chez Thomas... T'avais raison j'ai déconné je pensé que j'aurais pu conduire mais la sécurité avant tout.. Merci";
+        }
+        return DerniereReponse;
+    }
     private void InitReponsesUtil()
     {
         // TODO init Les Réponses de l'utilisateur
