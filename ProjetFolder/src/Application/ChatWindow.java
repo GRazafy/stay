@@ -23,10 +23,13 @@ public class ChatWindow extends Stage{
 
     private Separator sep;
 
+    private Reponses reponses;
+
     private VBox groupAnswers;
     private VBox groupConv;
 
     public ChatWindow(){
+        reponses = new Reponses();
         principalPane = new Pane();
         groupAnswers = new VBox();
         groupConv = new VBox();
@@ -80,8 +83,8 @@ public class ChatWindow extends Stage{
 
     public void update(){
         groupAnswers.getChildren().clear();
-        for (String elem in reponses.getTabReponsesBot()){
+        /*for (String elem in reponses.getTabReponsesBot()){
             groupAnswers.getChildren().add(new Label(elem));
-        }
+        }*/
     }
 }
