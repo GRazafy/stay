@@ -39,16 +39,13 @@ public class Reponses{
     }
 
     public void setReponsePrec(int i){
-        ReponsePrec =i;
+        ReponsePrec = i;
     }
 
     public int getReponsePrec(){
         return ReponsePrec;
     }
 
-    public boolean testMauvaiseBonne(int i){
-        return
-    }
 
     public boolean testArretSerieMauvaise(){
         return serieMauvaiseReponse>3;
