@@ -1,6 +1,6 @@
 package Application;
 
-public class Reponse {
+public class Reponses {
     final int TAILLEDIALOGUE = 5;
     final int NBREPONSE = 3;
 
