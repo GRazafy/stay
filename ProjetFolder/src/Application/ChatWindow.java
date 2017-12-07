@@ -18,7 +18,6 @@ public class ChatWindow extends Stage{
         scene = new Scene(grid,GLOBALWIDTH,GLOBALHEIGHT);
         scene.getStylesheets().add("src/application/view.css");
         System.out.println("ffff");
-
         setScene(scene);
         show();
     }
