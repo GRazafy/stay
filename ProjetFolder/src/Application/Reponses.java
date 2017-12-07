@@ -11,6 +11,10 @@ public class Reponses{
     /***Tableau de Toutes les réponses du BOT ***/
     private String[] tabReponsesBot = new String[TAILLEDIALOGUE];
 
+    private String DerniereReponse;
+
+    private int serieMauvaiseReponse = 0;
+
 
 
     public Reponses(){
@@ -18,6 +22,25 @@ public class Reponses{
         /***Initialisation des Tableau de Réponses du BOT et de l'UTILISATEUR***/
         InitReponsesUtil();
         InitReponsesBot();
+    }
+
+    public void reponseChoisi(int i){
+        switch (i){
+            case 0:
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+        }
+    }
+
+    public boolean testMauvaiseBonne(){
+
+    }
+
+    public boolean testArretSerieMauvaise(){
+        return serieMauvaiseReponse>3;
     }
 
 
