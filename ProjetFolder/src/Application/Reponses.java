@@ -1,9 +1,8 @@
 package Application;
 
-public class Reponses{
+public class Reponses {
     final int TAILLEDIALOGUE = 5;
     final int NBREPONSE = 3;
-
 
     /***Tableau de Toutes les réponses de L'UTILISATEUR ***/
     private String[][] tabReponsesUtil = new String[TAILLEDIALOGUE][NBREPONSE];
