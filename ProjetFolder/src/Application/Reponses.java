@@ -10,6 +10,12 @@ public class Reponses {
     /***Tableau de Toutes les réponses du BOT ***/
     private String[][] tabReponsesBot = new String[TAILLEDIALOGUE+1][NBREPONSE];
 
+    private String DerniereReponse;
+
+    private int serieMauvaiseReponse = 0;
+    private int ReponsePrec;
+
+    private int score = 0;
 
 
     public Reponses(){
@@ -17,6 +23,36 @@ public class Reponses {
         /***Initialisation des Tableau de Réponses du BOT et de l'UTILISATEUR***/
         InitReponsesUtil();
         InitReponsesBot();
+    }
+
+    public void reponseChoisi(int i) {
+        switch (i) {
+            case 0:
+                score++;
+                break;
+            case 1:
+                break;
+            case 2:
+                score--;
+                break;
+        }
+    }
+
+    public int getScore(){
+        return score;
+    }
+
+    public void setReponsePrec(int i){
+        ReponsePrec =i;
+    }
+
+    public int getReponsePrec(){
+        return ReponsePrec;
+    }
+
+
+    public boolean testArretSerieMauvaise(){
+        return serieMauvaiseReponse>3;
     }
 
 
@@ -28,6 +64,19 @@ public class Reponses {
         return tabReponsesBot;
     }
 
+    public String conclusionHistoire()
+    {
+        if(score < 0)
+        {
+            DerniereReponse = "Bonjour, je suis Charlotte, la mère d'Alex. C'est avec tristesse que je t'annonce que \nmon fils adoré est décédé cette nuit suite a" +
+                    " un accident de voiture... Il etait saoul";
+        }
+        else
+        {
+            DerniereReponse = "Au final j'ai dormi chez Thomas... T'avais raison j'ai déconné je pensé que j'aurais pu conduire mais la sécurité avant tout.. Merci";
+        }
+        return DerniereReponse;
+    }
     private void InitReponsesUtil()
     {
         // TODO init Les Réponses de l'utilisateur
