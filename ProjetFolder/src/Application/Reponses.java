@@ -25,8 +25,8 @@ public class Reponses {
         InitReponsesBot();
     }
 
-    public void reponseChoisi(int i){
-        switch (i){
+    public void reponseChoisi(int i) {
+        switch (i) {
             case 0:
                 score++;
                 break;
@@ -36,6 +36,10 @@ public class Reponses {
                 score--;
                 break;
         }
+    }
+
+    public int getScore(){
+        return score;
     }
 
     public void setReponsePrec(int i){
@@ -60,11 +64,11 @@ public class Reponses {
         return tabReponsesBot;
     }
 
-    private String conclusionHistoire()
+    public String conclusionHistoire()
     {
         if(score < 0)
         {
-            DerniereReponse = "Bonjour, je suis Charlotte, la mère d'Alex. C'est avec tristesse que je t'annonce que mon fils adoré est décédé cette nuit suite a" +
+            DerniereReponse = "Bonjour, je suis Charlotte, la mère d'Alex. C'est avec tristesse que je t'annonce que \nmon fils adoré est décédé cette nuit suite a" +
                     " un accident de voiture... Il etait saoul";
         }
         else
